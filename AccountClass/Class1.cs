@@ -9,8 +9,8 @@ namespace AccountClass
     public delegate void AccountHandler(string message);
     public class Account
     {
-        int sum;
-        string fio;
+        public int sum;
+        public string fio;
         // Создаем переменную делегата
         AccountHandler taken;
         public Account(int sum, string fio)
