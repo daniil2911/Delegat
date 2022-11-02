@@ -15,7 +15,7 @@ namespace Delegat
     public partial class Form1 : Form
     {
         string message;
-        void PrintSimpleMessag(string message) => listBox1.Items.Add(message);
+        void PrintSimpleMessag(string message) => listBox1.Items.Add(message);        
         public Form1()
         {
             InitializeComponent();
@@ -34,8 +34,7 @@ namespace Delegat
 
         private void button2_Click(object sender, EventArgs e)
         {
-            account.Add(Convert.ToInt32(textBox3.Text));
-            listBox1.Items.Clear();
+            account.Add(Convert.ToInt32(textBox3.Text));            
             listBox1.Items.Add($"Владелец счёта: {account.fio}, сумма на счете: {account.sum}");
         }
 

@@ -6,6 +6,24 @@ using System.Threading.Tasks;
 
 namespace AccountClass
 {
+    class AccountEventArgs
+    {
+        // Сообщение
+        public string Message { get; }
+        // Сумма, на которую изменился счет
+        public int Sum { get; }
+        public AccountEventArgs(string message, int sum)
+        {
+            Message = message;
+            Sum = sum;
+        }
+    }
+    public class AccountClass
+    {
+        public delegate void AccountDelegate(string message, int sum);
+        public delegate void AccountEventArgs(Account sender, AccountEventArgs e);
+        public event AccountHandler Notify;
+    }
     public delegate void AccountHandler(string message);
     public class Account
     {
@@ -39,4 +57,6 @@ namespace AccountClass
         }
     }
 }
+
+
 
