@@ -22,7 +22,9 @@ namespace Delegat
         }
         void DisplayMessage(Account sender, AccountEventArgs e)
         {
-            MessageBox.Show($"Сумма транзакции: {e.Sum}\n" + e.Message + $"\nТекущая сумма на счете: {sender.Sum}");
+            Console.WriteLine($"Сумма транзакции: {e.Sum}");
+            Console.WriteLine(e.Message);
+            Console.WriteLine($"Текущая сумма на счете: {sender.Sum}"); ;
         }
         Account ac;
         private void Form1_Load(object sender, EventArgs e)
